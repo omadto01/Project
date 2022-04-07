@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Project</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="static/css/style.css" />
+  </head>
+​
+  <body class="bg-dark">
+    <div class="wrapper">
+      <!-- Navbar -->
+      <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <a class="navbar-brand" href="mock.html">COSMETICS</a>
+      </nav>
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1 class="display-4">Sun Protection</h1>
+      </div>
+​
+      <!-- Article title and paragraph -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5 article-title">
+            <iframe src="https://giphy.com/embed/xpuZQOjRSAekkZkeLE" width="780" height="680" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/rosealldayco-roseallday-skinbyrose-dontforgetsunscreen-xpuZQOjRSAekkZkeLE"></a></p>
+          </div>
+          <div class="col-md-7 article-p">
+            <p>
+             Sun protection factor (SPF)<br><br>
+             Sunscreens are made in a wide range of SPFs.<br><br>
+             The SPF value indicates the level of sunburn protection provided by the sunscreen product. 
+             All sunscreens are tested to measure the amount of UV radiation exposure it takes to cause sunburn when using a sunscreen compared to how much UV exposure it takes to cause a sunburn when not using a sunscreen. 
+             The product is then labeled with the appropriate SPF value. Higher SPF values (up to 50) provide greater sunburn protection.
+             Because SPF values are determined from a test that measures protection against sunburn caused by UVB radiation, SPF values only indicate a sunscreen's UVB protection.<br><br>
+             
+             As of June 2011, sunscreens that pass the broad spectrum test can demonstrate that they also provide UVA protection. 
+             Therefore, under the label requirements, for sunscreens labeled "Broad Spectrum SPF [value]", 
+             they will indicate protection from both UVA and UVB radiation.<br><br>
+
+             YES = 1
+             NO = 0
+
+            </p>
+          </div>
+        </div>
+      </div>
+​
+      <!-- Filter -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-2">
+            <form class="bg-dark">
+              <p>Filter Search</p>
+              <ul class="list-group">
+                <li class="list-group-item bg-dark">
+                  <label for="Brand"> Enter Brand</label>
+                  <input type="text" placeholder="SHISEIDO" id="Brand" />
+                </li>  
+                  <label for="Price">Enter Price</label>
+                  <input type="text" placeholder="45" id="Price" />
+                </li>  
+                  <label for="Rank">Enter Rank</label>
+                  <input type="text" placeholder="4.4" id="Rank" />  
+                </li> 
+                  <label for="Ingredients">Enter Ingredients</label>
+                  <input type="text" placeholder="Water" id="Ingredients"/>
+                </li>
+                  <label for="Combination"> Enter Combination Types</label>
+                  <input type="text" placeholder="1" id="Combination"/>
+                </li>
+                  <label for="Oily">Enter Skin Oily Types</label>
+                  <input type="text" placeholder="1" id="Oily"/>
+                </li>
+              <li class="list-group-item bg-dark">
+               <button id="input" type="button" class="btn btn-dark"> 
+                     Filter Table
+                  </button>
+                </li>
+              </ul>
+            </form>
+            <form action="/predict" method="POST" class="form">
+                <div class="fieldset">
+                    <label>Results</label>
+                    <input class="exp" name="exp"/>
+                </div>
+                <input type="submit" class="button" value="predict">
+            </form>
+          </div>
+​
+          <!-- Table -->
+          <div class="col-md-10">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                 <th>Label</th>
+                 <th>Brand</th>
+                 <th>Name</th>
+                 <th>Price</th>
+                 <th>Rank</th>
+                 <th>Ingredients</th>
+                 <th>Combination</th>
+                 <th>Dry</th>
+                 <th>Normal</th>
+                 <th>Sensitive</th>
+                 <th>Oily</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            </div>
+            </div>
+            </div>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+            <script src="static/js/suncreen.js"></script>
+            <script src="static/js/app.js"></script>
+        </div>
+    </body>
+</html>
+
+
+
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Self Care</title>
+        <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    </head>
+    <body>
+        <body class="bg-dark">
+            <div class="wrapper">
+              <!-- Jumbotron -->
+              <div class="jumbotron">
+                <h1 class="display-4">Self Care</h1>
+              </div>
+	<header>
+		<div class="container">
+		    <h2>Select your Skin types or Ingredients</h2>
+	    </div>
+	</header>
+        <div class="container">
+            <iframe src="https://giphy.com/embed/xpuZQOjRSAekkZkeLE" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/rosealldayco-roseallday-skinbyrose-dontforgetsunscreen-xpuZQOjRSAekkZkeLE">via GIPHY</a></p>
+
+            <form action="/predict" method="POST" class="form">
+                <div class="fieldset">
+                    <label>Results</label>
+                    <input class="exp" name="exp"/>
+                </div>
+                <input type="submit" class="button" value="predict">
+            </form>
+        </div>
+         <!-- Table -->
+         <div class="col-md-9">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                 <th>Label</th>
+                 <th>Brand</th>
+                 <th>Name</th>
+                 <th>Price</th>
+                 <th>Rank</th>
+                 <th>Ingredients</th>
+                 <th>Combination</th>
+                 <th>Dry</th>
+                 <th>Normal</th>
+                 <th>Sensitive</th>
+                 <th>Oily</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+        <script src="static/js/suncreen.js"></script>
+        <script src="static/js/app.js"></script>>
+    </body>
+</html>
+
